@@ -14,4 +14,4 @@ O projeto Homeland é uma galeria de arte virtual responsiva que celebra as orig
 
 ## Link do Projeto
 
-[Insira aqui o link do GitHub Pages após ativar no repositório]
+[https://brunoalks.github.io/web_project_homeland/]
