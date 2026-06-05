@@ -1,0 +1,157 @@
+.place {
+  display: grid;
+  grid-template-areas:
+    "title artists"
+    "image paragraphs"
+    "button paragraphs";
+  grid-template-columns: minmax(0, 460px) minmax(0, 484px);
+  column-gap: 40px;
+  row-gap: 48px;
+}
+
+.place__title {
+  grid-area: title;
+  margin: 0;
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 1.06;
+}
+
+.place__artists {
+  grid-area: artists;
+  align-self: end;
+}
+
+.place__artist-label {
+  margin: 0 0 8px;
+  color: #aaaaaa;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.place__artist {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.22;
+}
+
+.place__image {
+  display: block;
+  grid-area: image;
+  width: 100%;
+}
+
+.place__image-placeholder {
+  display: flex;
+  grid-area: image;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #cccccc;
+}
+
+.place__image-placeholder-text {
+  max-width: 225px;
+  margin: 0;
+  color: #8b8b8b;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.22;
+  text-align: center;
+}
+
+.place__button {
+  display: flex;
+  grid-area: button;
+  align-items: center;
+  justify-content: center;
+  align-self: start;
+  width: 356px;
+  height: 48px;
+  padding: 0 20px;
+  border-radius: 4px;
+  background-color: #0278fe;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.22;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+}
+
+.place__button:hover {
+  background-color: #0063d2;
+}
+
+.place__paragraphs {
+  display: flex;
+  grid-area: paragraphs;
+  flex-direction: column;
+  row-gap: 25px;
+}
+
+.place__paragraph {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.63;
+}
+
+@media screen and (max-width: 768px) {
+  .place {
+    grid-template-columns: minmax(0, 340px) minmax(0, 352px);
+    column-gap: 28px;
+  }
+
+  .place__title {
+    font-size: 42px;
+    line-height: 1.1;
+  }
+
+  .place__paragraph {
+    font-size: 16px;
+    line-height: 1.63;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  .place {
+    grid-template-areas:
+      "title"
+      "artists"
+      "image"
+      "button"
+      "paragraphs";
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 30px;
+  }
+
+  .place__title {
+    margin: 0 16px;
+    font-size: 32px;
+    line-height: 1.09;
+  }
+
+  .place__artists {
+    margin: 0 16px;
+  }
+
+  .place__button {
+    width: calc(100% - 32px);
+    max-width: 288px;
+    margin: 0 16px;
+    font-size: 14px;
+    line-height: 1.14;
+  }
+
+  .place__paragraphs {
+    margin: 0 16px;
+  }
+}
