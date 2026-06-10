@@ -71,7 +71,8 @@
   align-items: center;
   justify-content: center;
   align-self: start;
-  width: 356px;
+  width: 100%;
+  max-width: 356px;
   height: 48px;
   padding: 0 20px;
   border-radius: 4px;
@@ -120,7 +121,21 @@
     line-height: 1.63;
   }
 }
+@media screen and (max-width: 650px) {
+  .place {
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+  }
 
+  .place__title,
+  .place__artists,
+  .place__image,
+  .place__image-placeholder,
+  .place__button,
+  .place__paragraphs {
+    grid-column: 1;
+  }
+}
 @media screen and (max-width: 544px) {
   .place {
     grid-template-areas:
